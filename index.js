@@ -25,14 +25,12 @@ myFunction();
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 function summation(num) {
-  /*Your Code Here*/
   let counter = 0;
-  for(let i = 0; i< counter; i++){
-    counter += num;
+  for(let i = 1 ; i <= num; i++){
+    counter += i;
   }
   return counter;
   }
-  console.log(summation(4));
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -54,23 +52,30 @@ const zooAnimals = [
   /* 🦁🦁🦁 Request 1: .forEach() 🦁🦁🦁
   The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
   */
-  function animalNames(info){
-    /*Your Code Here*/
-    const displayNames = [];
-    forEach(info => info.push(displayNames.animalNames, displayNames.scientific_name));
-  }
-  return displayNames;
+  // function animalNames(info){
+  //   const displayNames = [];
+  //   displayNames.forEach(info => info.push(info.animal_Names, info.scientific_name));
+  // }
+  // return displayNames;
   
+  function animalNames(arr){
+    const displayNames = [];
+    arr.forEach(arr => displayNames.push("Names: " + arr.animal_name + ", " + "Scientific: " + arr.scientific_name));
+    return displayNames;
+    }
+    
+
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
   */
   function lowerCaseNames(item){
     /*Your Code Here*/
-    const smallNames = item.map(function(item){
-         return item.animal_name.toLowerCase();
-       });
-  }
+    const lowCaseAnimalNames = item.map((item) => item.animal_name.toLowerCase());
+
+         return lowCaseAnimalNames;
+       }
+  
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -138,9 +143,9 @@ const zooAnimals = [
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-  console.log(consume(2, 2, add));  //4
-  console.log(consume(10, 16, multiply)); // 160
-  console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+  // console.log(consume(2, 2, add));  //4
+  // console.log(consume(10, 16, multiply)); // 160
+  // console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
   
   
 // 🦁💪 Stretch: If you haven't already, convert your array method callbacks into arrow functions 🦁💪
@@ -167,7 +172,7 @@ function CuboidMaker(length, width,height){
   Create a method using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
 CuboidMaker.prototype.volume = function(){
-  return length * width * height;3
+  return length * width * height;
 }
 
 
@@ -200,8 +205,8 @@ const newVolume = new CuboidMaker({
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+// console.log(cuboid.volume()); // 100
+// console.log(cuboid.surfaceArea()); // 130
  
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
@@ -224,8 +229,8 @@ class CuboidMakerTwo{
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-console.log(cuboidTwo.volume()); // 100
-console.log(cuboidTwo.surfaceArea()); // 130
+// console.log(cuboidTwo.volume()); // 100
+// console.log(cuboidTwo.surfaceArea()); // 130
 
 
 
