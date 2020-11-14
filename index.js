@@ -124,7 +124,7 @@ const zooAnimals = [
 
   const add = (num1, num2) => num1 + num2;
 
-// 🦁🦁🦁 Create a function named multiply that returns the product of two numbers 🦁🦁🦁
+// 🦁🦁🦁 Create a function named multiply that returns the product of two numbers/ 🦁🦁🦁
   
 // function multiply(num1, num2){
   //  /*Your Code Here */
